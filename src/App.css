@@ -1,6 +1,12 @@
 .App {
   text-align: center;
 }
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20em;
+}
 
 .room-select {
     display: flex;
@@ -40,9 +46,13 @@
 .messages {
     max-height: 40em;
     color: rgba(83, 187, 232, 0.1);
-    border-radius: 20%;
-    padding: 3em;
+    border-radius: 3%;
+    padding: 1em;
+    padding-right: 5em;
+}
 
+.message {
+    padding-right: 5em;
 }
 
 .submit {
