@@ -6,6 +6,7 @@ import {
   serverTimestamp,
   query,
   where,
+  orderBy,
 } from "firebase/firestore";
 import { async } from "@firebase/util";
 import { auth, db } from "../firebase-config";
@@ -19,14 +20,15 @@ export const Chat = (props) => {
   const messageRef = collection(db, "messages");
 
   useEffect(() => {
-    const queryMessages = query(messageRef, where("room", "==", room));
-    onSnapshot(queryMessages, (snapshot) => {
+    const queryMessages = query(messageRef, where("room", "==", room), orderBy("createdAt"));
+    const unsubscribe = onSnapshot(queryMessages, (snapshot) => {
       let messages = [];
       snapshot.forEach((doc) => {
         messages.push({ ...doc.data(), id: doc.id });
       });
       setMessages(messages);
     });
+    return () => unsubscribe();
   }, []);
 
   const handleSubmit = async (e) => {
@@ -45,7 +47,17 @@ export const Chat = (props) => {
   };
   return (
     <div className="chat-app">
-      <div>{messages.map((message) => <h1> {message.text}</h1>)}</div>
+      <div className="header">
+        <h1>Welcome to {room.toUpperCase()}</h1>
+      </div>
+      <div className="messages">
+        {messages.map((message) => (
+          <div className="message" key={message.id}>
+            <span className="user fw-bold">{message.user} ~> </span>
+            {message.text}
+          </div>
+        ))}
+      </div>
       <form onSubmit={handleSubmit} className="new-message-form">
         <input
           className="new-message-input"
