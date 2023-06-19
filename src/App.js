@@ -33,23 +33,31 @@ function App() {
       {room ? (
         <Chat room={room} />
       ) : (
-        <div className="room p-5">
+        <div className="room-select">
           <form>
-            <label class="form-label fw-bold">Enter Room Name:</label>
-            <input ref={roomInputRef} class="form-control mb-3" />
-            <div class="d-grid gap-2">
+            <div className="form-floating mb-3">
+              <input
+                ref={roomInputRef}
+                className="form-control mb-3 fw-light"
+                placeholder="Enter Room Name"
+              />
+              <label>Enter Room Name</label>
+            </div>
+            <div className="d-grid gap-2">
               <button
                 onClick={() => setRoom(roomInputRef.current.value)}
                 className="btn btn-primary "
               >
-                Enter Chat
+                Enter Room
               </button>
             </div>
           </form>
         </div>
       )}
-      <div className="sign-out">
-        <button onClick={signUserOut}>Sign Out</button>
+      <div className="sign-out  p-2">
+        <button className="btn btn-secondary" onClick={signUserOut}>
+          Sign Out
+        </button>
       </div>
     </div>
   );

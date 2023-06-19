@@ -2,9 +2,52 @@
   text-align: center;
 }
 
-.room {
+.room-select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15rem;
+}
+
+.sign-out {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.chat-room{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(174, 190, 196, 0.8);
+    padding: 5em;
+    border: 1em;
+}
+
+.chat-box{
+    max-width: 60em;
+    background: rgba(83, 187, 232, 0.9);
+    border: 1em;
+    border-radius: 15%;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    
+}
+.messages {
+    max-height: 40em;
+    color: rgba(83, 187, 232, 0.1);
+    border-radius: 20%;
+    padding: 3em;
+
+}
+
+.submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3em;
+}
