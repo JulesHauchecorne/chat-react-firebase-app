@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 20em;
+    padding-top: 10em;
 }
 
 .room-select {
@@ -48,12 +48,9 @@
     color: rgba(83, 187, 232, 0.1);
     border-radius: 3%;
     padding: 1em;
-    padding-right: 5em;
+    padding-right: 2em;
 }
 
-.message {
-    padding-right: 5em;
-}
 
 .submit {
     display: flex;

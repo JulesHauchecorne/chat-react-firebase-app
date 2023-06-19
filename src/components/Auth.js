@@ -18,7 +18,7 @@ export const Auth = (props) => {
   return (
     <div className="login">
       <div className="auth">
-        <button className="btn btn-lg btn-secondary p-3 align-middle vh-100" onClick={signInWithGoogle}>
+        <button className="btn btn-lg btn-secondary p-3 align-middle  my-5" onClick={signInWithGoogle}>
           Sign In With Google To Continue
         </button>
       </div>
