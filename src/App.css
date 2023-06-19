@@ -12,7 +12,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 15rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
 }
 
 .sign-out {

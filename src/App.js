@@ -40,8 +40,9 @@ function App() {
                 ref={roomInputRef}
                 className="form-control mb-3 fw-light"
                 placeholder="Enter Room Name"
+          id="room-name"
               />
-              <label>Enter Room Name</label>
+              <label className="enter-room-label text-wrap" for="room-name">Enter Room Name</label>
             </div>
             <div className="d-grid gap-2">
               <button
