@@ -5,9 +5,10 @@ import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
+// I put back the api key here and not as a env var since making publie api key of firebase are not 
+// a risk for security, this makes cloning the repository and using it easier.
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_API_KEY,
+  apiKey: "AIzaSyBIqkd2oX_2gC96RzMfwROBds9q9zokA-0" ,
   authDomain: "chat-react-firebase-3f0a1.firebaseapp.com",
   projectId: "chat-react-firebase-3f0a1",
   storageBucket: "chat-react-firebase-3f0a1.appspot.com",
